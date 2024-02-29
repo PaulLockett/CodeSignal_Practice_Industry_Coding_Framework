@@ -1,6 +1,6 @@
 # Mock CodeSignal Pre-screen: INDUSTRY CODING FRAMEWORK
 
-This document serves as a mock example of an industry coding framework assessment, similar to those found in pre-screens on CodeSignal. It's important to highlight the rarity of comprehensive guides or examples on navigating these types of assessments on the internet, making this document an invaluable resource for those seeking to prepare for such challenges 🚀.
+This serves as a mock example of an industry coding framework assessment, similar to those found in pre-screens on CodeSignal. It's important to highlight the rarity of comprehensive guides or examples on navigating these types of assessments on the internet, making this document an invaluable resource for those seeking to prepare for such challenges 🚀.
 
 For more insights and resources, follow the creator on Twitter [@PaulLockettkpb](https://twitter.com/PaulLockettkpb).
 
