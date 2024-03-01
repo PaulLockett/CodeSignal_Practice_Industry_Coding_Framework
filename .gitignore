@@ -1,1 +1,3 @@
 /.pytest_cache
+
+practice_assessments/**/__pycache__/*
