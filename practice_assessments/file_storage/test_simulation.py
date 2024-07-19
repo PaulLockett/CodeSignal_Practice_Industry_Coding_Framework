@@ -16,7 +16,7 @@ class TestSimulateCodingFramework(unittest.TestCase):
         self.test_data_3 = [
             ["FILE_UPLOAD_AT", "2021-07-01T12:00:00", "Python.txt", "150kb"], 
             ["FILE_UPLOAD_AT", "2021-07-01T12:00:00", "CodeSignal.txt", "150kb", 3600], 
-                       ["FILE_GET_AT", "2021-07-01T13:00:01", "Python.txt"], 
+            ["FILE_GET_AT", "2021-07-01T13:00:01", "Python.txt"], 
             ["FILE_COPY_AT", "2021-07-01T12:00:00", "Python.txt", "PythonCopy.txt"], 
             ["FILE_SEARCH_AT", "2021-07-01T12:00:00", "Py"],
             ["FILE_UPLOAD_AT", "2021-07-01T12:00:00", "Expired.txt", "100kb", 1], 
@@ -47,10 +47,11 @@ class TestSimulateCodingFramework(unittest.TestCase):
 
     def test_group_3(self):
         output = simulate_coding_framework(self.test_data_3)
-        self.assertEqual(output, ["uploaded at Python.txt", "uploaded at CodeSignal.txt", "got at Python.txt", "copied at Python.txt to PythonCopy.txt", "found at [Python.txt]", "uploaded at Expired.txt", "file not found", "copied at CodeSignal.txt to CodeSignalCopy.txt", "found at [CodeSignal.txt]"])
-
+        self.assertEqual(output, ["uploaded at Python.txt", "uploaded at CodeSignal.txt", "got at Python.txt", "copied at Python.txt to PythonCopy.txt", "found at [Python.txt, PythonCopy.txt]", "uploaded at Expired.txt", "file not found", "copied at CodeSignal.txt to CodeSignalCopy.txt", "found at [CodeSignal.txt, CodeSignalCopy.txt]"])
+  
     def test_group_4(self):
         output = simulate_coding_framework(self.test_data_4)
-        self.assertEqual(output, ["uploaded at Initial.txt", "uploaded at Update1.txt", "got at Initial.txt", "copied at Update1.txt to Update1Copy.txt", "uploaded at Update2.txt", "rollback to 2021-07-01T12:10:00", "got at Update1.txt", "got at Initial.txt", "found at [Update1.txt]", "file not found"])
+        self.assertEqual(output, ["uploaded at Initial.txt", "uploaded at Update1.txt", "got at Initial.txt", "copied at Update1.txt to Update1Copy.txt", "uploaded at Update2.txt", "rollback to 2021-07-01T12:10:00", "got at Update1.txt", "got at Initial.txt", "found at [Update1.txt, Update1Copy.txt, Update2.txt]", "got at Update2.txt"])
+
 if __name__ == '__main__':
     unittest.main()
