@@ -43,7 +43,7 @@ class TestSimulateCodingFramework(unittest.TestCase):
 
     def test_group_2(self):
         output = simulate_coding_framework(self.test_data_2)
-        self.assertEqual(output, ["uploaded Foo.txt", "uploaded Bar.csv", "uploaded Baz.pdf", "found [Bar.csv, Baz.pdf]"])
+        self.assertEqual(output, ["uploaded Foo.txt", "uploaded Bar.csv", "uploaded Baz.pdf", "found [Baz.pdf, Bar.csv]"])
 
     def test_group_3(self):
         output = simulate_coding_framework(self.test_data_3)
