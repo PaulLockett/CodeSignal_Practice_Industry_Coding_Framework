@@ -40,8 +40,8 @@ By ensuring these prerequisites are met, you will be well-prepared to engage wit
 
 4. **Running Tests**: Utilize the provided `test_simulation.py` file to run unit tests against your code 🧪. This file contains test cases for each level, allowing you to verify the correctness of your solutions incrementally. To run the tests for a specific level, use the following command structure in your terminal or command prompt:
 
-   - For Level 1 tests: `python -m unittest practice_assessments.file_storage.test_simulation.TestSimulateCodingFramework.test_group_1`
-   - For Level 2 tests: `python -m unittest practice_assessments.file_storage.test_simulation.TestSimulateCodingFramework.test_group_2`
+   - For Level 1 tests: `python3 -m unittest test_simulation.TestSimulateCodingFramework.test_group_1`
+   - For Level 2 tests: `python3 -m unittest test_simulation.TestSimulateCodingFramework.test_group_2`
    - For subsequent levels, adjust the `test_group_x` part of the command accordingly.
 
 5. **Refactoring**: As you progress through the levels, revisit and refactor your earlier solutions as needed to accommodate the additional functionality required by later tasks 🔧. This iterative process is key to developing scalable and maintainable software.
