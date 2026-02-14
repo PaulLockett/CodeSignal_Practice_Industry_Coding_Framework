@@ -51,7 +51,7 @@ class TestSimulateCodingFramework(unittest.TestCase):
   
     def test_group_4(self):
         output = simulate_coding_framework(self.test_data_4)
-        self.assertEqual(output, ["uploaded at Initial.txt", "uploaded at Update1.txt", "got at Initial.txt", "copied at Update1.txt to Update1Copy.txt", "uploaded at Update2.txt", "rollback to 2021-07-01T12:10:00", "got at Update1.txt", "got at Initial.txt", "found at [Update1.txt, Update1Copy.txt, Update2.txt]", "got at Update2.txt"])
+        self.assertEqual(output, ["uploaded at Initial.txt", "uploaded at Update1.txt", "got at Initial.txt", "copied at Update1.txt to Update1Copy.txt", "uploaded at Update2.txt", "rollback to 2021-07-01T12:10:00", "got at Update1.txt", "got at Initial.txt", "found at [Update1.txt]", "file not found"])
 
 if __name__ == '__main__':
     unittest.main()
