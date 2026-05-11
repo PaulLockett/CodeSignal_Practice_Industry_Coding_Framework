@@ -19,13 +19,17 @@ Before diving into the tasks and running the tests outlined in this guide, it's 
 3. **Familiarity with Terminal or Command Prompt**: Basic knowledge of using the terminal (Mac/Linux) or command prompt (Windows) will be beneficial. You will need to use it to run the test scripts provided in the `test_simulation.py` file.
 
 4. **Install Required Python Packages**: Before starting with the tasks, it's essential to install the Python packages listed in the `requirements.txt` file. These packages include necessary libraries that might be used throughout the tasks in this guide. To install these packages, run the following command in your terminal or command prompt:
-   ```
+
+   ```bash
    pip install -r requirements.txt
    ```
+
    or
-   ```
+
+   ```bash
    /path/to/python3.10.6 -m pip install -r requirements.txt
    ```
+
    This command tells pip, Python's package installer, to install all the packages listed in the `requirements.txt` file. Ensure you are in the same directory as the `requirements.txt` file when running this command or provide the correct path to it. Installing these packages beforehand will ensure that you have all the necessary tools and libraries at your disposal, facilitating a smoother coding experience.
    > **Important Note**: When installing Python and the required packages, it is crucial to ensure that the version of Python installed matches the version used by CodeSignal, which is **3.10.6**. Additionally, verify that your Integrated Development Environment (IDE) is configured to use the same Python interpreter. This consistency is essential for avoiding discrepancies in behavior or functionality due to differences in Python versions.
 
@@ -100,3 +104,24 @@ Contributing to this guide is a fantastic way to help others prepare for industr
 7. **Stay Engaged**: After submitting your questions, stay engaged with the community. Respond to feedback on your pull request and be open to making adjustments to your questions as recommended by reviewers.
 
 By contributing to this guide, you're not only helping others prepare for their coding assessments but also honing your own skills in creating meaningful, challenging coding problems. We look forward to seeing your contributions and expanding our collection of practice assessments!
+
+## Usage with uv
+
+uv is a modern Python package management solution which enables this application to be run in an isolated virtual environment.
+
+[Install uv as described here](https://docs.astral.sh/uv/getting-started/installation/), then:
+
+```bash
+uv venv
+source .venv/bin/activate
+# or, `source .venv/Scripts/activate` on Windows
+uv pip install -r requirements.txt
+```
+
+Now you can update your solution code in the relevant simulation.py file as explained elsewhere in this README, then run the test file to verify your solution.
+
+For example, to run the test suite for the file storage problem, we run:
+
+```bash
+python practice_assessments/file_storage/test_simulation.py
+```
