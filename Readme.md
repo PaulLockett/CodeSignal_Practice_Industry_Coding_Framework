@@ -18,7 +18,7 @@ Before diving into the tasks and running the tests outlined in this guide, it's 
 
 3. **Familiarity with Terminal or Command Prompt**: Basic knowledge of using the terminal (Mac/Linux) or command prompt (Windows) will be beneficial. You will need to use it to run the test scripts provided in the `test_simulation.py` file.
 
-4. **Install Required Python Packages**: Before starting with the tasks, it's essential to install the Python packages listed in the `requirements.txt` file. These packages include necessary libraries that might be used throughout the tasks in this guide. To install these packages, run the following command in your terminal or command prompt:
+4. **Optional Python Packages**: The file-storage starter and tests use only Python's standard library; no package installation is needed to start practicing. If your implementation uses the extra libraries listed in `requirements.txt`, install them with:
 
    ```bash
    pip install -r requirements.txt
@@ -42,11 +42,16 @@ By ensuring these prerequisites are met, you will be well-prepared to engage wit
 
 3. **Testing and Development Environment**: Focus your coding efforts within the `simulation.py` file 🖥️. This file is where you will implement your solutions and simulate the operations described in the tasks.
 
-4. **Running Tests**: Utilize the provided `test_simulation.py` file to run unit tests against your code 🧪. This file contains test cases for each level, allowing you to verify the correctness of your solutions incrementally. To run the tests for a specific level, use the following command structure in your terminal or command prompt:
+4. **Running Tests**: Run these commands from the repository root. Tests are grouped into `TestLevel1` through `TestLevel4`, with descriptive names for each behavior:
 
-   - For Level 1 tests: `python3 -m unittest test_simulation.TestSimulateCodingFramework.test_group_1`
-   - For Level 2 tests: `python3 -m unittest test_simulation.TestSimulateCodingFramework.test_group_2`
-   - For subsequent levels, adjust the `test_group_x` part of the command accordingly.
+   - Level 1: `python3 practice_assessments/file_storage/test_simulation.py TestLevel1 -v`
+   - Level 2: `python3 practice_assessments/file_storage/test_simulation.py TestLevel2 -v`
+   - Levels 3 and 4: replace the class name with `TestLevel3` or `TestLevel4`.
+   - All levels: `python3 practice_assessments/file_storage/test_simulation.py -v`
+
+   Each normal test lists `(command, expected_result)` pairs together. The shared helper runs the commands in one call to preserve state, checks that every command has a result, and identifies the command when a result differs. Error cases use `assertRaises(RuntimeError)` because exceptions stop the simulation instead of producing a result.
+
+   The input/output contract is documented in `simulation.py`. Its implementation intentionally starts as `pass`, so tests will fail until you implement the corresponding behavior. To add a case, add a descriptive `test_...` method to the appropriate level class and call `self.assert_simulation([...])` with command/result pairs.
 
 5. **Refactoring**: As you progress through the levels, revisit and refactor your earlier solutions as needed to accommodate the additional functionality required by later tasks 🔧. This iterative process is key to developing scalable and maintainable software.
 
